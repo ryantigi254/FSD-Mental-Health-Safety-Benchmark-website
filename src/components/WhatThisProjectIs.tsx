@@ -32,14 +32,20 @@ export default function WhatThisProjectIs() {
               <p className="text-sm text-fsd-charcoal leading-relaxed">
                 <strong>Note:</strong> This page showcases the research project.
                 The live benchmark platform is a{" "}
-                <a
-                  href={siteContent.benchmarkUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary underline underline-offset-2 hover:text-fsd-blue-deep/80"
-                >
-                  separate artefact
-                </a>
+                {siteContent.benchmarkUrl ? (
+                  <a
+                    href={siteContent.benchmarkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline underline-offset-2 hover:text-fsd-blue-deep/80"
+                  >
+                    separate artefact
+                  </a>
+                ) : (
+                  <span className="text-primary font-medium">
+                    separate artefact (coming soon)
+                  </span>
+                )}
                 .
               </p>
             </div>

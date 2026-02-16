@@ -21,9 +21,3 @@ export const NAV_LABELS: Record<SectionId, string> = {
   outputs: "Outputs",
   benchmark: "Benchmark",
 };
-
-export const EXTERNAL_LINKS = {
-  // TODO: Replace with actual benchmark platform URL when available
-  benchmark: "https://TODO-benchmark-platform.example.com",
-  repository: "https://github.com/ryantigi254/FSD-Mental-Health-Safety-Benchmark.git",
-} as const;

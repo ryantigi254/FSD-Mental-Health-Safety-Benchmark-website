@@ -1,8 +1,11 @@
 import { siteContent } from "@/content/site";
 import Button from "./ui/Button";
+import Badge from "./ui/Badge";
 import FadeInView from "./ui/FadeInView";
 
 export default function BenchmarkCTA() {
+  const benchmarkAvailable = siteContent.benchmarkUrl !== null;
+
   return (
     <section
       id={siteContent.sections.benchmark.id}
@@ -35,16 +38,22 @@ export default function BenchmarkCTA() {
         </FadeInView>
 
         <FadeInView delay={0.2}>
-          {/* TODO: Replace placeholder URL in src/content/site.ts */}
-          <Button
-            href={siteContent.benchmarkUrl}
-            external
-            variant="secondary"
-            size="lg"
-            className="border-white text-white hover:bg-white/10"
-          >
-            Open Benchmark Platform
-          </Button>
+          {benchmarkAvailable ? (
+            <Button
+              href={siteContent.benchmarkUrl!}
+              external
+              variant="secondary"
+              size="lg"
+              className="border-white text-white hover:bg-white/10"
+            >
+              Open Benchmark Platform
+            </Button>
+          ) : (
+            <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 border-white/30 text-white/60 cursor-default text-lg font-semibold">
+              Benchmark Platform
+              <Badge status="coming-soon" label="Coming Soon" />
+            </span>
+          )}
         </FadeInView>
       </div>
     </section>

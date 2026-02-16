@@ -22,6 +22,7 @@ export interface SEOContent {
   ogImage: string;
   twitterCard: "summary_large_image" | "summary";
   keywords: string[];
+  metadataBase: string;
 }
 
 export interface ImpactCard {
@@ -35,22 +36,21 @@ export interface SiteContent {
   title: string;
   tagline: string;
   missionStatement: string;
-  benchmarkUrl: string;
+  benchmarkUrl: string | null;
   repositoryUrl: string;
   sections: Record<string, SectionHeading>;
   footer: FooterContent;
   seo: SEOContent;
 }
 
-// TODO: Replace placeholder text below with final project copy
 export const siteContent: SiteContent = {
   title: "FSD Mental Health Safety Benchmark",
   tagline: "Evaluating clinical reasoning reliability in mental health LLMs",
   missionStatement:
     "A lightweight benchmark evaluating three critical failure modes in large language models destined for mental health support: unfaithful reasoning, sycophantic agreement, and longitudinal drift.",
 
-  // TODO: Replace with actual benchmark platform URL when available
-  benchmarkUrl: "https://TODO-benchmark-platform.example.com",
+  // Set to null until the benchmark platform is live — the CTA will show "Coming Soon"
+  benchmarkUrl: null,
   repositoryUrl: "https://github.com/ryantigi254/FSD-Mental-Health-Safety-Benchmark.git",
 
   sections: {
@@ -94,6 +94,8 @@ export const siteContent: SiteContent = {
       "sycophancy",
       "longitudinal drift",
     ],
+    // TODO: Replace with actual deployed URL
+    metadataBase: "https://ryantigi254.github.io/FSD-Mental-Health-Safety-Benchmark-website",
   },
 };
 

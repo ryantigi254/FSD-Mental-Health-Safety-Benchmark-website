@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1A3D5C"/>
+  <rect x="540" y="140" width="48" height="48" rx="12" fill="#3D8B8B"/>
+  <text x="600" y="170" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" letter-spacing="0.1em" fill="#3D8B8B" dy="50">RESEARCH PROJECT</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="700" fill="white" letter-spacing="-0.02em">FSD Mental Health</text>
+  <text x="600" y="365" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="700" fill="white" letter-spacing="-0.02em">Safety Benchmark</text>
+  <text x="600" y="440" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" fill="rgba(255,255,255,0.7)">Evaluating clinical reasoning reliability in mental health LLMs</text>
+</svg>

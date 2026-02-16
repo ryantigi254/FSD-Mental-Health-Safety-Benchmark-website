@@ -3,19 +3,24 @@
 /* ─── FSD Mental Health Safety Benchmark Design Tokens ─── */
 @theme {
   /* Brand palette from the deck */
-  --color-fsd-blue-soft: #8DAAC2;
+  --color-fsd-blue-soft: #3D8B8B;
   --color-fsd-orange: #ED7D31;
   --color-fsd-grey: #A5A5A5;
   --color-fsd-amber: #FFC000;
-  --color-fsd-blue-deep: #4472C4;
+  --color-fsd-blue-deep: #1A3D5C;
   --color-fsd-green: #70AD47;
   --color-fsd-black: #000000;
   --color-fsd-charcoal: #333333;
   --color-fsd-light: #EEEEEE;
   --color-fsd-white: #FFFFFF;
 
+  /* Teal accent (primary deck colour) */
+  --color-fsd-teal: #3D8B8B;
+  /* Dark supporting colour */
+  --color-fsd-dark: #1A3D5C;
+
   /* Semantic aliases */
-  --color-primary: #4472C4;
+  --color-primary: #3D8B8B;
   --color-accent: #ED7D31;
   --color-success: #70AD47;
   --color-warning: #FFC000;
@@ -68,12 +73,12 @@
   }
 
   ::selection {
-    background-color: var(--color-fsd-blue-soft);
+    background-color: var(--color-fsd-teal);
     color: var(--color-fsd-white);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-fsd-blue-deep);
+    outline: 2px solid var(--color-fsd-teal);
     outline-offset: 2px;
     border-radius: 2px;
   }
