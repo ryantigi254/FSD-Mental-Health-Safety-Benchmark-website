@@ -51,26 +51,21 @@ export default function Hero() {
         </FadeInView>
 
         <FadeInView delay={0.5}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {benchmarkAvailable ? (
-              <Button
-                href={siteContent.benchmarkUrl!}
-                external
-                variant="primary"
-                size="lg"
-              >
-                Open Benchmark Platform
-              </Button>
-            ) : (
-              <span className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-fsd-grey/10 text-fsd-grey cursor-default text-lg font-semibold">
-                Benchmark Platform
-                <Badge status="coming-soon" />
-              </span>
-            )}
-            <Button href="#about" variant="secondary" size="lg">
-              Read Project Overview
+          {benchmarkAvailable ? (
+            <Button
+              href={siteContent.benchmarkUrl!}
+              external
+              variant="primary"
+              size="lg"
+            >
+              Open Benchmark Platform
             </Button>
-          </div>
+          ) : (
+            <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 border-fsd-grey/30 text-fsd-grey cursor-default text-lg font-semibold">
+              Benchmark Platform
+              <Badge status="coming-soon" label="Coming Soon" />
+            </span>
+          )}
         </FadeInView>
       </div>
 
