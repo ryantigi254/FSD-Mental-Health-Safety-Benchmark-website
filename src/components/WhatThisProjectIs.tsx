@@ -37,7 +37,7 @@ export default function WhatThisProjectIs() {
                     href={siteContent.benchmarkUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary underline underline-offset-2 hover:text-fsd-blue-deep/80"
+                    className="text-primary underline underline-offset-2 hover:text-fsd-teal/80"
                   >
                     separate artefact
                   </a>
@@ -70,9 +70,9 @@ export default function WhatThisProjectIs() {
                 title: "Sycophancy",
                 description:
                   "Can models maintain clinical accuracy while refusing to agree with user errors under social pressure?",
-                color: "border-l-fsd-blue-deep",
-                hoverGlow: "hover:shadow-glow-dark",
-                labelColor: "text-fsd-dark",
+                color: "border-l-fsd-teal",
+                hoverGlow: "hover:shadow-glow-teal",
+                labelColor: "text-fsd-teal",
               },
               {
                 label: "Study C",

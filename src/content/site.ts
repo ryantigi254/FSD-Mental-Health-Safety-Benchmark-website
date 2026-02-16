@@ -113,7 +113,7 @@ export const impactCards: ImpactCard[] = [
     title: "Transparency",
     description:
       "Measures whether model explanations genuinely reflect their decision-making process, or are post-hoc rationalisations.",
-    accentColor: "fsd-blue-deep",
+    accentColor: "fsd-teal",
   },
   {
     icon: "chart",

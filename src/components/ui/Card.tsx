@@ -9,7 +9,8 @@ interface CardProps {
 
 const accentColorMap: Record<string, string> = {
   "fsd-orange": "border-l-fsd-orange",
-  "fsd-blue-deep": "border-l-fsd-blue-deep",
+  "fsd-blue-deep": "border-l-fsd-teal",
+  "fsd-teal": "border-l-fsd-teal",
   "fsd-green": "border-l-fsd-green",
   "fsd-amber": "border-l-fsd-amber",
   "fsd-blue-soft": "border-l-fsd-blue-soft",
@@ -18,7 +19,8 @@ const accentColorMap: Record<string, string> = {
 /* Underglow colour that matches the accent — creates coloured ambient light beneath the card on hover */
 const accentGlowMap: Record<string, string> = {
   "fsd-orange": "hover:shadow-[0_8px_30px_-4px_rgba(237,125,49,0.2)]",
-  "fsd-blue-deep": "hover:shadow-glow-dark",
+  "fsd-blue-deep": "hover:shadow-glow-teal",
+  "fsd-teal": "hover:shadow-glow-teal",
   "fsd-green": "hover:shadow-glow-green",
   "fsd-amber": "hover:shadow-glow-amber",
   "fsd-blue-soft": "hover:shadow-glow-teal",
@@ -31,7 +33,7 @@ export default function Card({
   hoverable = true,
 }: CardProps) {
   const accent = accentColor
-    ? `border-l-4 ${accentColorMap[accentColor] || "border-l-fsd-blue-deep"}`
+    ? `border-l-4 ${accentColorMap[accentColor] || "border-l-fsd-teal"}`
     : "";
   const glowShadow = accentColor && accentGlowMap[accentColor]
     ? accentGlowMap[accentColor]

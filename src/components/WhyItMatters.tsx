@@ -32,7 +32,8 @@ const iconMap: Record<string, ReactElement> = {
 
 const accentIconColors: Record<string, string> = {
   "fsd-orange": "text-fsd-orange",
-  "fsd-blue-deep": "text-fsd-blue-deep",
+  "fsd-blue-deep": "text-fsd-teal",
+  "fsd-teal": "text-fsd-teal",
   "fsd-green": "text-fsd-green",
   "fsd-amber": "text-fsd-amber",
 };
@@ -65,7 +66,7 @@ export default function WhyItMatters() {
         {impactCards.map((card) => (
           <motion.div key={card.title} variants={itemVariants}>
             <Card accentColor={card.accentColor} className="h-full">
-              <div className={`mb-4 ${accentIconColors[card.accentColor] || "text-fsd-blue-deep"}`}>
+              <div className={`mb-4 ${accentIconColors[card.accentColor] || "text-fsd-teal"}`}>
                 {iconMap[card.icon] || iconMap.shield}
               </div>
               <h3 className="text-lg font-semibold text-fsd-charcoal mb-2">

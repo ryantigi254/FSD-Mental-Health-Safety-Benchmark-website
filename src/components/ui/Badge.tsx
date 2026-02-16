@@ -18,10 +18,10 @@ const statusStyles: Record<BadgeStatus, string> = {
   done: "bg-fsd-green/15 text-fsd-green",
   active: "bg-fsd-orange/15 text-fsd-orange",
   planned: "bg-fsd-grey/15 text-fsd-grey",
-  release: "bg-fsd-blue-deep/15 text-fsd-blue-deep",
+  release: "bg-fsd-teal/15 text-fsd-teal",
   milestone: "bg-fsd-green/15 text-fsd-green",
   paper: "bg-fsd-amber/15 text-fsd-charcoal",
-  data: "bg-fsd-blue-soft/15 text-fsd-blue-deep",
+  data: "bg-fsd-teal/15 text-fsd-teal",
   "coming-soon": "bg-fsd-grey/15 text-fsd-grey",
   available: "bg-fsd-green/15 text-fsd-green",
 };

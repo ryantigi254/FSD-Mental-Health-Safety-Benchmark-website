@@ -10,7 +10,7 @@ export default function BenchmarkCTA() {
     <section
       id={siteContent.sections.benchmark.id}
       aria-labelledby="benchmark-heading"
-      className="relative bg-fsd-blue-deep py-20 px-6 overflow-hidden"
+      className="relative bg-fsd-teal py-20 px-6 overflow-hidden"
     >
       {/* Ambient underglow mesh on dark background */}
       <div className="absolute inset-0 pointer-events-none">

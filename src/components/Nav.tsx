@@ -37,7 +37,7 @@ export default function Nav() {
                   href={`#${id}`}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive
-                      ? "text-primary bg-fsd-blue-deep/5"
+                      ? "text-primary bg-fsd-teal/5"
                       : "text-text-secondary hover:text-fsd-charcoal hover:bg-fsd-light/50"
                   }`}
                 >
@@ -80,7 +80,7 @@ export default function Nav() {
                     onClick={() => setMobileOpen(false)}
                     className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive
-                        ? "text-primary bg-fsd-blue-deep/5"
+                        ? "text-primary bg-fsd-teal/5"
                         : "text-text-secondary hover:text-fsd-charcoal hover:bg-fsd-light/50"
                     }`}
                   >
