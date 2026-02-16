@@ -32,7 +32,7 @@ export default function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  const baseClasses = `cta-edge-loader inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+  const baseClasses = `inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {
     return (

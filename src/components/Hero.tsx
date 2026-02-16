@@ -55,13 +55,14 @@ export default function Hero() {
             <Button
               href={siteContent.benchmarkUrl!}
               external
-              variant="primary"
+              variant="secondary"
               size="lg"
+              className="bg-fsd-teal border-white text-white hover:bg-fsd-dark hover:border-white"
             >
               Open Benchmark Platform
             </Button>
           ) : (
-            <span className="cta-edge-loader inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 border-fsd-grey/30 text-fsd-grey cursor-default text-lg font-semibold">
+            <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 bg-fsd-teal border-white/30 text-white/60 cursor-default text-lg font-semibold">
               Benchmark Platform
               <Badge status="coming-soon" label="Coming Soon" />
             </span>

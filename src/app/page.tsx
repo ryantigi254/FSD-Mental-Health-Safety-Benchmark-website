@@ -8,10 +8,12 @@ import Outputs from "@/components/Outputs";
 import References from "@/components/References";
 import BenchmarkCTA from "@/components/BenchmarkCTA";
 import Footer from "@/components/Footer";
+import ForceHeroOnLoad from "@/components/ForceHeroOnLoad";
 
 export default function Home() {
   return (
     <>
+      <ForceHeroOnLoad />
       <Nav />
       <main id="main-content">
         <Hero />
