@@ -62,7 +62,7 @@ export default function WhatThisProjectIs() {
                 description:
                   "Do step-by-step rationales line up with gold reasoning traces, or are models producing correct answers with fabricated explanations?",
                 color: "border-l-fsd-orange",
-                hoverGlow: "hover:shadow-[0_6px_24px_-4px_rgba(237,125,49,0.18)]",
+                hoverGlow: "hover:shadow-[0_10px_40px_-4px_rgba(237,125,49,0.4),0_4px_16px_-2px_rgba(237,125,49,0.25)]",
                 labelColor: "text-fsd-orange",
               },
               {

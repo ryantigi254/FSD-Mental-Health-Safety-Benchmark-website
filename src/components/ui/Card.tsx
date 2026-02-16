@@ -18,7 +18,7 @@ const accentColorMap: Record<string, string> = {
 
 /* Underglow colour that matches the accent — creates coloured ambient light beneath the card on hover */
 const accentGlowMap: Record<string, string> = {
-  "fsd-orange": "hover:shadow-[0_8px_30px_-4px_rgba(237,125,49,0.2)]",
+  "fsd-orange": "hover:shadow-[0_10px_40px_-4px_rgba(237,125,49,0.4),0_4px_16px_-2px_rgba(237,125,49,0.25)]",
   "fsd-blue-deep": "hover:shadow-glow-teal",
   "fsd-teal": "hover:shadow-glow-teal",
   "fsd-green": "hover:shadow-glow-green",
