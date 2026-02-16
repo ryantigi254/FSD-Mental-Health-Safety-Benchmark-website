@@ -57,7 +57,7 @@ export default function BenchmarkCTA() {
               Open Benchmark Platform
             </Button>
           ) : (
-            <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 border-white/30 text-white/60 cursor-default text-lg font-semibold">
+            <span className="cta-edge-loader inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 border-white/30 text-white/60 cursor-default text-lg font-semibold">
               Benchmark Platform
               <Badge status="coming-soon" label="Coming Soon" />
             </span>
