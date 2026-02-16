@@ -46,22 +46,33 @@ export default function BenchmarkCTA() {
         </FadeInView>
 
         <FadeInView delay={0.2}>
-          {benchmarkAvailable ? (
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
-              href={siteContent.benchmarkUrl!}
+              href={siteContent.liveSiteUrl}
               external
               variant="secondary"
               size="lg"
               className="border-white text-white hover:bg-white/10"
             >
-              Open Benchmark Platform
+              Visit Live Site
             </Button>
-          ) : (
-            <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 border-white/30 text-white/60 cursor-default text-lg font-semibold">
-              Benchmark Platform
-              <Badge status="coming-soon" label="Coming Soon" />
-            </span>
-          )}
+            {benchmarkAvailable ? (
+              <Button
+                href={siteContent.benchmarkUrl!}
+                external
+                variant="secondary"
+                size="lg"
+                className="border-white/50 text-white/80 hover:bg-white/10"
+              >
+                Open Benchmark Platform
+              </Button>
+            ) : (
+              <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 border-white/30 text-white/60 cursor-default text-lg font-semibold">
+                Benchmark Platform
+                <Badge status="coming-soon" label="Coming Soon" />
+              </span>
+            )}
+          </div>
         </FadeInView>
       </div>
     </section>

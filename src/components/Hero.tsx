@@ -1,10 +1,8 @@
 import { siteContent } from "@/content/site";
 import Button from "./ui/Button";
-import Badge from "./ui/Badge";
 import FadeInView from "./ui/FadeInView";
 
 export default function Hero() {
-  const benchmarkAvailable = siteContent.benchmarkUrl !== null;
 
   return (
     <section
@@ -52,21 +50,14 @@ export default function Hero() {
 
         <FadeInView delay={0.5}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {benchmarkAvailable ? (
-              <Button
-                href={siteContent.benchmarkUrl!}
-                external
-                variant="primary"
-                size="lg"
-              >
-                View Benchmark Platform
-              </Button>
-            ) : (
-              <span className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-fsd-grey/10 text-fsd-grey cursor-default text-lg font-semibold">
-                Benchmark Platform
-                <Badge status="coming-soon" />
-              </span>
-            )}
+            <Button
+              href={siteContent.liveSiteUrl}
+              external
+              variant="primary"
+              size="lg"
+            >
+              Visit Live Site
+            </Button>
             <Button href="#about" variant="secondary" size="lg">
               Read Project Overview
             </Button>

@@ -27,18 +27,41 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contact */}
+          {/* Links */}
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-2">
-              Contact
+              Links
             </h4>
-            {/* TODO: Replace with actual contact email */}
-            <a
-              href={`mailto:${footer.contactEmail}`}
-              className="text-fsd-cool-grey text-sm hover:text-fsd-teal transition-colors"
-            >
-              {footer.contactEmail}
-            </a>
+            <ul className="space-y-1.5">
+              <li>
+                <a
+                  href={siteContent.liveSiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-fsd-cool-grey text-sm hover:text-fsd-teal transition-colors"
+                >
+                  Live Site
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteContent.repositoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-fsd-cool-grey text-sm hover:text-fsd-teal transition-colors"
+                >
+                  GitHub Repository
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${footer.contactEmail}`}
+                  className="text-fsd-cool-grey text-sm hover:text-fsd-teal transition-colors"
+                >
+                  {footer.contactEmail}
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* Last updated */}

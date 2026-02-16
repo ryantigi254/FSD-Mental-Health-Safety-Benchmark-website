@@ -37,6 +37,7 @@ export interface SiteContent {
   tagline: string;
   missionStatement: string;
   benchmarkUrl: string | null;
+  liveSiteUrl: string;
   repositoryUrl: string;
   sections: Record<string, SectionHeading>;
   footer: FooterContent;
@@ -51,6 +52,7 @@ export const siteContent: SiteContent = {
 
   // Set to null until the benchmark platform is live — the CTA will show "Coming Soon"
   benchmarkUrl: null,
+  liveSiteUrl: "https://fsd-benchmark.netlify.app/",
   repositoryUrl: "https://github.com/ryantigi254/FSD-Mental-Health-Safety-Benchmark.git",
 
   sections: {
@@ -95,8 +97,7 @@ export const siteContent: SiteContent = {
       "sycophancy",
       "longitudinal drift",
     ],
-    // TODO: Replace with actual deployed URL
-    metadataBase: "https://ryantigi254.github.io/FSD-Mental-Health-Safety-Benchmark-website",
+    metadataBase: "https://fsd-benchmark.netlify.app",
   },
 };
 
