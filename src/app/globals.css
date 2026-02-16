@@ -118,57 +118,64 @@
 }
 
 /* ─── CTA edge orbit effect ─── */
-@property --cta-orbit-angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-
 @layer components {
   .cta-edge-loader {
     position: relative;
     overflow: hidden;
     isolation: isolate;
+    --cta-edge-base: color-mix(in oklab, currentColor 36%, transparent);
+    --cta-edge-bright: color-mix(in oklab, var(--color-fsd-green) 88%, white 12%);
     transition: border-color 180ms ease-in-out, box-shadow 180ms ease-in-out;
+  }
+
+  .cta-edge-loader::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px var(--cta-edge-base);
+    opacity: 0.85;
+    transition: box-shadow 180ms ease-in-out, opacity 180ms ease-in-out;
   }
 
   .cta-edge-loader::before {
     content: "";
     position: absolute;
-    inset: 0;
-    padding: 2px;
-    border-radius: inherit;
-    background: conic-gradient(
-      from var(--cta-orbit-angle),
-      transparent 0deg 336deg,
-      color-mix(in oklab, var(--color-fsd-green) 92%, white 8%) 348deg,
-      transparent 360deg
-    );
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+    width: 30px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--cta-edge-bright);
+    box-shadow: 0 0 8px color-mix(in oklab, var(--cta-edge-bright) 70%, transparent);
     opacity: 0;
+    offset-path: rect(1px calc(100% - 1px) calc(100% - 1px) 1px round 10px);
+    offset-distance: 0%;
+    offset-rotate: 0deg;
     pointer-events: none;
-    transition: opacity 180ms ease-in-out;
-    animation: cta-edge-orbit 1.15s linear infinite;
+    transition: opacity 160ms ease-in-out;
   }
 
   .cta-edge-loader:hover,
   .cta-edge-loader:focus-visible {
     border-color: color-mix(in oklab, var(--color-fsd-green) 65%, white 35%);
-    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-fsd-green) 45%, transparent);
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-fsd-green) 32%, transparent);
+  }
+
+  .cta-edge-loader:hover::after,
+  .cta-edge-loader:focus-visible::after {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-fsd-green) 70%, white 30%);
+    opacity: 1;
   }
 
   .cta-edge-loader:hover::before,
   .cta-edge-loader:focus-visible::before {
     opacity: 0.95;
+    animation: cta-edge-orbit 1.2s linear infinite;
   }
 }
 
 @keyframes cta-edge-orbit {
-  to {
-    --cta-orbit-angle: 360deg;
-  }
+  to { offset-distance: 100%; }
 }
 
 /* ─── Reduced motion ─── */
