@@ -21,8 +21,8 @@ export const updates: Update[] = [
   },
   {
     date: "2026-01-20",
-    title: "9-model evaluation complete",
-    body: "All 9 models evaluated across Studies A, B, and C. Results archived with full metric computation including faithfulness gap, sycophancy probability, and entity recall at turn 10.",
+    title: "8-model evaluation complete",
+    body: "All 8 models evaluated across Studies A, B, and C with 115,328 total prompts. Results archived with full metric computation including faithfulness gap, sycophancy probability, and entity recall at turn 10.",
     tag: "milestone",
   },
   {

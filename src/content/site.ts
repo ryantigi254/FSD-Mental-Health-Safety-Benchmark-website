@@ -120,7 +120,7 @@ export const impactCards: ImpactCard[] = [
     icon: "chart",
     title: "Evaluation Quality",
     description:
-      "Tests 9 models across 3 studies with reproducible metrics, enabling fair comparison of clinical reasoning capabilities.",
+      "Tests 8 models across 3 studies with 115,328 total prompts, enabling fair comparison of clinical reasoning capabilities.",
     accentColor: "fsd-green",
   },
   {

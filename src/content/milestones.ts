@@ -28,9 +28,16 @@ export const milestones: Milestone[] = [
   },
   {
     date: "Jan 2026",
-    title: "9-Model Evaluation Complete",
+    title: "Dataset Scaling Complete",
     description:
-      "Ran all studies across 9 models with full metric computation and result archival.",
+      "Scaled to 14,416 prompts per model across all studies — Study A: 4,000 CoT/Early + 2,016 adversarial bias; Study B: 4,000 single-turn + 2,400 multi-turn; Study C: 2,000 longitudinal turns.",
+    status: "done",
+  },
+  {
+    date: "Jan 2026",
+    title: "8-Model Evaluation Complete",
+    description:
+      "Ran all studies across 8 models totalling 115,328 prompts with full metric computation and result archival.",
     status: "done",
   },
   {
