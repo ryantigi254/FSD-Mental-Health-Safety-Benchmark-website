@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { SECTION_IDS, NAV_LABELS } from "@/lib/constants";
 
@@ -22,9 +23,16 @@ export default function Nav() {
         {/* Logo / project name */}
         <a
           href="#hero"
-          className="font-bold text-fsd-charcoal text-sm sm:text-base hover:text-primary transition-colors truncate"
+          className="inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
         >
-          FSD Benchmark
+          <Image
+            src="/assets/fsd-teal-logo.svg"
+            alt="FSD Mental Health AI Safety logo"
+            width={180}
+            height={44}
+            className="h-9 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop nav links */}
