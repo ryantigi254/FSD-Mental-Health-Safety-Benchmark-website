@@ -62,7 +62,7 @@ export default function Hero() {
               Open Benchmark Platform
             </Button>
           ) : (
-            <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 bg-fsd-teal border-white/30 text-white/60 cursor-default text-lg font-semibold">
+            <span className="inline-flex items-center gap-3 px-8 py-4 rounded-lg border-2 bg-fsd-blue-soft/90 border-fsd-grey/70 text-white/70 cursor-default text-lg font-semibold">
               Benchmark Platform
               <Badge status="coming-soon" label="Coming Soon" />
             </span>
