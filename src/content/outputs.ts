@@ -58,7 +58,7 @@ export const outputs: OutputArtefact[] = [
 export const analysisNotebooks: AnalysisNotebook[] = [
   {
     title: "Study A — Faithfulness Analysis",
-    description: "Faithfulness gap, step-F1, and accuracy metrics across all 8 models.",
+    description: "Faithfulness gap, step-F1, and accuracy metrics across evaluated models.",
     url: "/notebooks/study_a_analysis.html",
   },
   {

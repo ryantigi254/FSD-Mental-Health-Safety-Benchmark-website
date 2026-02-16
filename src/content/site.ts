@@ -48,7 +48,7 @@ export const siteContent: SiteContent = {
   title: "FSD Mental Health Safety Benchmark",
   tagline: "Evaluating clinical reasoning reliability in mental health LLMs",
   missionStatement:
-    "A lightweight benchmark evaluating three critical failure modes in large language models destined for mental health support: unfaithful reasoning, sycophantic agreement, and longitudinal drift.",
+    "A black-box, scalable benchmark harness evaluating three critical failure modes in large language models destined for mental health support: unfaithful reasoning, sycophantic agreement, and longitudinal drift.",
 
   // Set to null until the benchmark platform is live — the CTA will show "Coming Soon"
   benchmarkUrl: null,
@@ -80,7 +80,7 @@ export const siteContent: SiteContent = {
   seo: {
     title: "FSD Mental Health Safety Benchmark",
     description:
-      "A lightweight benchmark evaluating clinical reasoning reliability " +
+      "A black-box, scalable benchmark harness evaluating clinical reasoning reliability " +
       "in mental health LLMs across faithfulness, sycophancy, and drift.",
     ogTitle: "FSD Mental Health Safety Benchmark",
     ogDescription:
@@ -120,7 +120,7 @@ export const impactCards: ImpactCard[] = [
     icon: "chart",
     title: "Evaluation Quality",
     description:
-      "Tests 8 models across 3 studies with 115,328 total prompts, enabling fair comparison of clinical reasoning capabilities.",
+      "Tests multiple models across three studies with reproducible scoring pipelines, enabling fair comparison of clinical reasoning capabilities.",
     accentColor: "fsd-green",
   },
   {
