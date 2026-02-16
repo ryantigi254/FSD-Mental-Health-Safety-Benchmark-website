@@ -4,8 +4,9 @@ import { motion, type Variants } from "framer-motion";
 import SectionWrapper from "./ui/SectionWrapper";
 import Card from "./ui/Card";
 import Badge from "./ui/Badge";
+import FadeInView from "./ui/FadeInView";
 import { siteContent } from "@/content/site";
-import { outputs, type OutputType } from "@/content/outputs";
+import { outputs, analysisNotebooks, type OutputType } from "@/content/outputs";
 import type { ReactElement } from "react";
 
 const typeIcons: Record<OutputType, ReactElement> = {
@@ -39,6 +40,11 @@ const typeIcons: Record<OutputType, ReactElement> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
     </svg>
   ),
+  notebook: (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>
+  ),
 };
 
 const containerVariants: Variants = {
@@ -53,6 +59,12 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
+const externalIcon = (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+  </svg>
+);
+
 export default function Outputs() {
   return (
     <SectionWrapper
@@ -60,6 +72,7 @@ export default function Outputs() {
       title={siteContent.sections.outputs.title}
       background="light"
     >
+      {/* Artefact cards */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -93,15 +106,61 @@ export default function Outputs() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary hover:text-fsd-blue-deep/80 transition-colors"
                     >
-                      View
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
+                      {output.external ? "View on GitHub" : "Download"}
+                      {externalIcon}
                     </a>
                   )}
                 </div>
               </div>
             </Card>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Analysis Notebooks */}
+      <FadeInView delay={0.2} className="mt-16">
+        <h3 className="text-2xl font-bold text-fsd-charcoal mb-2">
+          Analysis Notebooks
+        </h3>
+        <p className="text-text-secondary mb-6">
+          Interactive analysis from the benchmark evaluation runs. Each notebook contains charts, tables, and detailed metric breakdowns.
+        </p>
+      </FadeInView>
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        className="grid sm:grid-cols-2 gap-4"
+      >
+        {analysisNotebooks.map((nb) => (
+          <motion.div key={nb.title} variants={itemVariants}>
+            <a
+              href={nb.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <Card className="h-full group-hover:shadow-card-hover group-hover:-translate-y-0.5 transition-all duration-200">
+                <div className="flex items-start gap-4">
+                  <div className="text-fsd-green shrink-0 mt-0.5">
+                    {typeIcons.notebook}
+                  </div>
+                  <div>
+                    <h4 className="text-base font-semibold text-fsd-charcoal mb-1 group-hover:text-primary transition-colors">
+                      {nb.title}
+                    </h4>
+                    <p className="text-sm text-text-secondary leading-relaxed">
+                      {nb.description}
+                    </p>
+                    <span className="inline-flex items-center gap-1 mt-2 text-xs font-medium text-primary">
+                      Open notebook {externalIcon}
+                    </span>
+                  </div>
+                </div>
+              </Card>
+            </a>
           </motion.div>
         ))}
       </motion.div>

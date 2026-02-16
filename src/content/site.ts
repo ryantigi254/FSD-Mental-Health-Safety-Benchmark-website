@@ -49,10 +49,9 @@ export const siteContent: SiteContent = {
   missionStatement:
     "A lightweight benchmark evaluating three critical failure modes in large language models destined for mental health support: unfaithful reasoning, sycophantic agreement, and longitudinal drift.",
 
-  // TODO: Replace with actual benchmark platform URL
+  // TODO: Replace with actual benchmark platform URL when available
   benchmarkUrl: "https://TODO-benchmark-platform.example.com",
-  // TODO: Replace with actual repository URL
-  repositoryUrl: "https://github.com/TODO/reliable-clinical-benchmark",
+  repositoryUrl: "https://github.com/ryantigi254/FSD-Mental-Health-Safety-Benchmark.git",
 
   sections: {
     hero:      { id: "hero",      title: "FSD Mental Health Safety Benchmark" },
@@ -65,8 +64,7 @@ export const siteContent: SiteContent = {
   },
 
   footer: {
-    // TODO: Replace with actual contact email
-    contactEmail: "TODO@example.ac.uk",
+    contactEmail: "ryan.gichuru22@my.northampton.ac.uk",
     lastUpdated: "2026-02-16",
     disclaimer:
       "This website showcases the FSD Mental Health Safety Benchmark project. " +
