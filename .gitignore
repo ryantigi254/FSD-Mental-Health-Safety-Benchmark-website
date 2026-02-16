@@ -35,6 +35,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+.netlify
+codex_scratchpad.md
 
 # typescript
 *.tsbuildinfo

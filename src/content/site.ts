@@ -54,13 +54,14 @@ export const siteContent: SiteContent = {
   repositoryUrl: "https://github.com/ryantigi254/FSD-Mental-Health-Safety-Benchmark.git",
 
   sections: {
-    hero:      { id: "hero",      title: "FSD Mental Health Safety Benchmark" },
-    about:     { id: "about",     title: "What This Project Is",   subtitle: "Purpose & Scope" },
-    impact:    { id: "impact",    title: "Why It Matters" },
-    status:    { id: "status",    title: "Current Status" },
-    updates:   { id: "updates",   title: "Updates" },
-    outputs:   { id: "outputs",   title: "Outputs & Artefacts" },
-    benchmark: { id: "benchmark", title: "Explore the Benchmark" },
+    hero:       { id: "hero",       title: "FSD Mental Health Safety Benchmark" },
+    about:      { id: "about",      title: "What This Project Is",   subtitle: "Purpose & Scope" },
+    impact:     { id: "impact",     title: "Why It Matters" },
+    status:     { id: "status",     title: "Current Status" },
+    updates:    { id: "updates",    title: "Updates" },
+    outputs:    { id: "outputs",    title: "Outputs & Artefacts" },
+    references: { id: "references", title: "References" },
+    benchmark:  { id: "benchmark",  title: "Explore the Benchmark" },
   },
 
   footer: {

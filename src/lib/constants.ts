@@ -7,6 +7,7 @@ export const SECTION_IDS = [
   "status",
   "updates",
   "outputs",
+  "references",
   "benchmark",
 ] as const;
 
@@ -19,5 +20,6 @@ export const NAV_LABELS: Record<SectionId, string> = {
   status: "Status",
   updates: "Updates",
   outputs: "Outputs",
+  references: "References",
   benchmark: "Benchmark",
 };

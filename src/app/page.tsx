@@ -5,6 +5,7 @@ import WhyItMatters from "@/components/WhyItMatters";
 import CurrentStatus from "@/components/CurrentStatus";
 import Updates from "@/components/Updates";
 import Outputs from "@/components/Outputs";
+import References from "@/components/References";
 import BenchmarkCTA from "@/components/BenchmarkCTA";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <CurrentStatus />
         <Updates />
         <Outputs />
+        <References />
         <BenchmarkCTA />
       </main>
       <Footer />
