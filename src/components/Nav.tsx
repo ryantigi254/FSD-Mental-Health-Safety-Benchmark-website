@@ -16,6 +16,8 @@ export default function Nav() {
       className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-nav"
       aria-label="Main navigation"
     >
+      {/* Thin gradient accent strip — deck teal → dark → teal */}
+      <div className="h-[2px] bg-gradient-to-r from-fsd-teal/0 via-fsd-teal to-fsd-dark/40" />
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo / project name */}
         <a

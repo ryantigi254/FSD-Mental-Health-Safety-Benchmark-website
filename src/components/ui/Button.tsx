@@ -10,11 +10,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles = {
   primary:
-    "bg-fsd-blue-deep text-white hover:bg-fsd-blue-deep/90 shadow-sm hover:shadow-md",
+    "bg-fsd-blue-deep text-white hover:bg-fsd-blue-deep/90 shadow-sm hover:shadow-glow-dark",
   secondary:
-    "border-2 border-fsd-blue-deep text-fsd-blue-deep hover:bg-fsd-blue-deep/5",
+    "border-2 border-fsd-blue-deep text-fsd-blue-deep hover:bg-fsd-blue-deep/5 hover:shadow-glow-teal-sm",
   ghost:
-    "text-fsd-charcoal hover:text-fsd-blue-deep underline underline-offset-4",
+    "text-fsd-charcoal hover:text-fsd-teal underline underline-offset-4",
 };
 
 const sizeStyles = {

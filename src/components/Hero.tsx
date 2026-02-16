@@ -9,12 +9,18 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-white to-surface-alt px-6"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-fsd-off-white to-surface-alt px-6"
     >
-      {/* Subtle background pattern */}
+      {/* Ambient underglow mesh — deck palette blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-fsd-blue-soft/8 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-fsd-blue-deep/5 blur-3xl" />
+        {/* Primary teal — top right */}
+        <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-fsd-teal/8 blur-[100px] animate-ambient-drift" />
+        {/* Deep navy — bottom left */}
+        <div className="absolute -bottom-48 -left-48 w-[440px] h-[440px] rounded-full bg-fsd-dark/6 blur-[100px] animate-ambient-drift [animation-delay:-4s]" />
+        {/* Amber hint — centre left */}
+        <div className="absolute top-1/3 -left-20 w-[280px] h-[280px] rounded-full bg-fsd-amber/5 blur-[80px] animate-ambient-drift [animation-delay:-8s]" />
+        {/* Green whisper — bottom right */}
+        <div className="absolute bottom-20 right-10 w-[200px] h-[200px] rounded-full bg-fsd-green/4 blur-[70px]" />
       </div>
 
       <div className="relative max-w-4xl mx-auto text-center">
@@ -25,9 +31,11 @@ export default function Hero() {
         </FadeInView>
 
         <FadeInView delay={0.2}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-fsd-charcoal mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-fsd-charcoal mb-4 leading-tight">
             {siteContent.title}
           </h1>
+          {/* Deck-coloured gradient accent line */}
+          <div className="mx-auto mb-6 h-1 w-24 rounded-full bg-gradient-to-r from-fsd-teal via-fsd-dark to-fsd-teal opacity-60" />
         </FadeInView>
 
         <FadeInView delay={0.3}>

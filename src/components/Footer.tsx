@@ -9,8 +9,13 @@ export default function Footer() {
   );
 
   return (
-    <footer className="bg-fsd-charcoal py-12 px-6">
-      <div className="max-w-6xl mx-auto">
+    <footer className="relative bg-fsd-charcoal py-12 px-6 overflow-hidden">
+      {/* Top edge gradient — teal glow line separating from content */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-fsd-teal/25 to-transparent" />
+      {/* Subtle ambient glow in footer */}
+      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[500px] h-[200px] rounded-full bg-fsd-teal/4 blur-[80px] pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {/* Project name */}
           <div>
@@ -30,7 +35,7 @@ export default function Footer() {
             {/* TODO: Replace with actual contact email */}
             <a
               href={`mailto:${footer.contactEmail}`}
-              className="text-fsd-grey text-sm hover:text-white transition-colors"
+              className="text-fsd-cool-grey text-sm hover:text-fsd-teal transition-colors"
             >
               {footer.contactEmail}
             </a>
@@ -45,8 +50,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/10 pt-6">
+        {/* Gradient divider — deck teal fade */}
+        <div className="pt-6 border-t border-transparent" style={{ borderImage: "linear-gradient(to right, transparent, rgba(61,139,139,0.25), transparent) 1" }}>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <p className="text-fsd-grey/70 text-xs leading-relaxed max-w-2xl">
               {footer.disclaimer}

@@ -41,6 +41,8 @@ export default function SectionWrapper({
             >
               {title}
             </h2>
+            {/* Gradient accent underline — deck teal-to-dark */}
+            <div className="mt-3 h-0.5 w-16 rounded-full bg-gradient-to-r from-fsd-teal to-fsd-dark/40" />
           </div>
         </FadeInView>
         {children}

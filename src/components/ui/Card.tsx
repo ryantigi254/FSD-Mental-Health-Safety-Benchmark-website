@@ -15,6 +15,15 @@ const accentColorMap: Record<string, string> = {
   "fsd-blue-soft": "border-l-fsd-blue-soft",
 };
 
+/* Underglow colour that matches the accent — creates coloured ambient light beneath the card on hover */
+const accentGlowMap: Record<string, string> = {
+  "fsd-orange": "hover:shadow-[0_8px_30px_-4px_rgba(237,125,49,0.2)]",
+  "fsd-blue-deep": "hover:shadow-glow-dark",
+  "fsd-green": "hover:shadow-glow-green",
+  "fsd-amber": "hover:shadow-glow-amber",
+  "fsd-blue-soft": "hover:shadow-glow-teal",
+};
+
 export default function Card({
   children,
   className = "",
@@ -24,8 +33,11 @@ export default function Card({
   const accent = accentColor
     ? `border-l-4 ${accentColorMap[accentColor] || "border-l-fsd-blue-deep"}`
     : "";
+  const glowShadow = accentColor && accentGlowMap[accentColor]
+    ? accentGlowMap[accentColor]
+    : "hover:shadow-glow-teal-sm";
   const hover = hoverable
-    ? "hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200"
+    ? `hover:-translate-y-1 ${glowShadow} transition-all duration-300`
     : "";
 
   return (

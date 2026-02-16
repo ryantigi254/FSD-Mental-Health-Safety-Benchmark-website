@@ -89,7 +89,7 @@ export default function Outputs() {
                 </div>
               )}
               <div className="flex items-start gap-4">
-                <div className="text-fsd-blue-deep shrink-0 mt-0.5">
+                <div className="text-fsd-teal shrink-0 mt-0.5">
                   {typeIcons[output.type] || typeIcons.report}
                 </div>
                 <div>
@@ -104,7 +104,7 @@ export default function Outputs() {
                       href={output.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary hover:text-fsd-blue-deep/80 transition-colors"
+                      className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary hover:text-fsd-dark transition-colors"
                     >
                       {output.external ? "View on GitHub" : "Download"}
                       {externalIcon}
@@ -119,9 +119,10 @@ export default function Outputs() {
 
       {/* Analysis Notebooks */}
       <FadeInView delay={0.2} className="mt-16">
-        <h3 className="text-2xl font-bold text-fsd-charcoal mb-2">
+        <h3 className="text-2xl font-bold text-fsd-charcoal mb-1">
           Analysis Notebooks
         </h3>
+        <div className="mb-3 h-0.5 w-12 rounded-full bg-gradient-to-r from-fsd-green to-fsd-teal/40" />
         <p className="text-text-secondary mb-6">
           Interactive analysis from the benchmark evaluation runs. Each notebook contains charts, tables, and detailed metric breakdowns.
         </p>
@@ -142,7 +143,7 @@ export default function Outputs() {
               rel="noopener noreferrer"
               className="group block"
             >
-              <Card className="h-full group-hover:shadow-card-hover group-hover:-translate-y-0.5 transition-all duration-200">
+              <Card className="h-full group-hover:shadow-glow-green group-hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="text-fsd-green shrink-0 mt-0.5">
                     {typeIcons.notebook}

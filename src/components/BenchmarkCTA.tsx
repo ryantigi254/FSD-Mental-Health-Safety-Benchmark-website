@@ -10,9 +10,17 @@ export default function BenchmarkCTA() {
     <section
       id={siteContent.sections.benchmark.id}
       aria-labelledby="benchmark-heading"
-      className="bg-fsd-blue-deep py-20 px-6"
+      className="relative bg-fsd-blue-deep py-20 px-6 overflow-hidden"
     >
-      <div className="max-w-3xl mx-auto text-center">
+      {/* Ambient underglow mesh on dark background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[350px] h-[350px] rounded-full bg-fsd-teal/10 blur-[100px] animate-ambient-drift" />
+        <div className="absolute bottom-0 right-1/4 w-[280px] h-[280px] rounded-full bg-fsd-amber/6 blur-[80px] animate-ambient-drift [animation-delay:-6s]" />
+        {/* Top edge gradient fade — creates depth */}
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-fsd-teal/30 to-transparent" />
+      </div>
+
+      <div className="relative max-w-3xl mx-auto text-center">
         <FadeInView>
           <h2
             id="benchmark-heading"

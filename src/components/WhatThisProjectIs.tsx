@@ -28,7 +28,7 @@ export default function WhatThisProjectIs() {
             </p>
 
             {/* Explicit project-only framing */}
-            <div className="bg-fsd-blue-deep/5 border border-fsd-blue-deep/15 rounded-lg p-4 mt-6">
+            <div className="bg-gradient-to-r from-fsd-teal/5 to-fsd-dark/5 border border-fsd-teal/15 rounded-lg p-4 mt-6">
               <p className="text-sm text-fsd-charcoal leading-relaxed">
                 <strong>Note:</strong> This page showcases the research project.
                 The live benchmark platform is a{" "}
@@ -62,6 +62,8 @@ export default function WhatThisProjectIs() {
                 description:
                   "Do step-by-step rationales line up with gold reasoning traces, or are models producing correct answers with fabricated explanations?",
                 color: "border-l-fsd-orange",
+                hoverGlow: "hover:shadow-[0_6px_24px_-4px_rgba(237,125,49,0.18)]",
+                labelColor: "text-fsd-orange",
               },
               {
                 label: "Study B",
@@ -69,6 +71,8 @@ export default function WhatThisProjectIs() {
                 description:
                   "Can models maintain clinical accuracy while refusing to agree with user errors under social pressure?",
                 color: "border-l-fsd-blue-deep",
+                hoverGlow: "hover:shadow-glow-dark",
+                labelColor: "text-fsd-dark",
               },
               {
                 label: "Study C",
@@ -76,14 +80,16 @@ export default function WhatThisProjectIs() {
                 description:
                   "Does the model maintain consistency and recall critical patient details over multi-turn therapeutic conversations?",
                 color: "border-l-fsd-green",
+                hoverGlow: "hover:shadow-glow-green",
+                labelColor: "text-fsd-green",
               },
             ].map((study) => (
               <div
                 key={study.label}
-                className={`bg-white rounded-lg shadow-card p-5 border-l-4 ${study.color}`}
+                className={`bg-white rounded-lg shadow-card p-5 border-l-4 ${study.color} ${study.hoverGlow} hover:-translate-y-0.5 transition-all duration-300`}
               >
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs font-bold uppercase tracking-wider text-text-secondary">
+                  <span className={`text-xs font-bold uppercase tracking-wider ${study.labelColor}`}>
                     {study.label}
                   </span>
                   <span className="text-fsd-charcoal font-semibold">
