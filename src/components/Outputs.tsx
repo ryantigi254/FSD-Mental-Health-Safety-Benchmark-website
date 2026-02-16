@@ -82,7 +82,7 @@ export default function Outputs() {
       >
         {outputs.map((output) => (
           <motion.div key={output.title} variants={itemVariants}>
-            <Card className="h-full relative" hoverable={output.status === "available"}>
+            <Card className="h-full relative hover:shadow-glow-teal hover:-translate-y-1 transition-all duration-300" hoverable={false}>
               {output.status === "coming-soon" && (
                 <div className="absolute top-4 right-4">
                   <Badge status="coming-soon" />
@@ -143,7 +143,7 @@ export default function Outputs() {
               rel="noopener noreferrer"
               className="group block"
             >
-              <Card className="h-full group-hover:shadow-glow-green group-hover:-translate-y-1 transition-all duration-300">
+              <Card className="h-full group-hover:shadow-glow-green group-hover:-translate-y-1.5 transition-all duration-300" hoverable={false}>
                 <div className="flex items-start gap-4">
                   <div className="text-fsd-green shrink-0 mt-0.5">
                     {typeIcons.notebook}

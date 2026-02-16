@@ -21,7 +21,7 @@ export default function UpdateEntry({
   });
 
   return (
-    <article className="bg-white rounded-xl shadow-card p-6 hover:shadow-glow-teal-sm hover:-translate-y-0.5 transition-all duration-300">
+    <article className="bg-white rounded-xl shadow-card p-6 hover:shadow-glow-teal hover:-translate-y-1 transition-all duration-300">
       <div className="flex flex-wrap items-center gap-3 mb-2">
         <time
           dateTime={date}
