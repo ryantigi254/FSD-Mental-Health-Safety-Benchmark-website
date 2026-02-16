@@ -1,0 +1,29 @@
+// src/lib/constants.ts
+
+export const SECTION_IDS = [
+  "hero",
+  "about",
+  "impact",
+  "status",
+  "updates",
+  "outputs",
+  "benchmark",
+] as const;
+
+export type SectionId = (typeof SECTION_IDS)[number];
+
+export const NAV_LABELS: Record<SectionId, string> = {
+  hero: "Home",
+  about: "About",
+  impact: "Why It Matters",
+  status: "Status",
+  updates: "Updates",
+  outputs: "Outputs",
+  benchmark: "Benchmark",
+};
+
+// TODO: Replace with actual URLs
+export const EXTERNAL_LINKS = {
+  benchmark: "https://TODO-benchmark-platform.example.com",
+  repository: "https://github.com/TODO/reliable-clinical-benchmark",
+} as const;

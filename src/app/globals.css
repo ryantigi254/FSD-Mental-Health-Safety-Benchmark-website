@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* ─── FSD Mental Health Safety Benchmark Design Tokens ─── */
+@theme {
+  /* Brand palette from the deck */
+  --color-fsd-blue-soft: #8DAAC2;
+  --color-fsd-orange: #ED7D31;
+  --color-fsd-grey: #A5A5A5;
+  --color-fsd-amber: #FFC000;
+  --color-fsd-blue-deep: #4472C4;
+  --color-fsd-green: #70AD47;
+  --color-fsd-black: #000000;
+  --color-fsd-charcoal: #333333;
+  --color-fsd-light: #EEEEEE;
+  --color-fsd-white: #FFFFFF;
+
+  /* Semantic aliases */
+  --color-primary: #4472C4;
+  --color-accent: #ED7D31;
+  --color-success: #70AD47;
+  --color-warning: #FFC000;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F7F8FA;
+  --color-text-primary: #333333;
+  --color-text-secondary: #6B7280;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  /* Spacing extras */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-nav: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-slide-up: slide-up 0.6s ease-out both;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(1.5rem); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ─── Base styles ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    color: var(--color-text-primary);
+    background-color: var(--color-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-fsd-blue-soft);
+    color: var(--color-fsd-white);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-fsd-blue-deep);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Heading typography */
+  h1, h2, h3, h4 {
+    color: var(--color-fsd-charcoal);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
