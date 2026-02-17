@@ -124,7 +124,7 @@ export default function Outputs() {
         </h3>
         <div className="mb-3 h-0.5 w-12 rounded-full bg-gradient-to-r from-fsd-green to-fsd-teal/40" />
         <p className="text-text-secondary mb-6">
-          Interactive analysis from the benchmark evaluation runs. Each notebook contains charts, tables, and detailed metric breakdowns.
+          Interactive analysis from the benchmark&apos;s initial small-scale evaluation run (not the full scaled-dataset evaluation). Each notebook contains charts, tables, and detailed metric breakdowns.
         </p>
       </FadeInView>
 
